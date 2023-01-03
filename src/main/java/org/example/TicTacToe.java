@@ -30,8 +30,27 @@ public class TicTacToe {
         }
     }
 
-    public void makeMove(Player player) {
+    public void init() {
+        int cnt = 0;
+        while (cnt < playground.field.size() * playground.field.size()) {
+            makeMove(first.equals("computer") ? comp : human);
+            cnt += 1;
+            makeMove(first.equals("computer") ? human : comp);
+            cnt += 1;
+        }
+    }
 
+    public void makeMove(Player player) {
+        int[] cell = player.chooseCell(playground.field.size());
+        while (!playground.field.get(cell[0])[cell[1]].equals('*')) {
+            // Here, infinite loop will be obtained
+            cell = player.chooseCell(playground.field.size());
+        }
+        playground.changeField(
+            cell,
+            player.toString().equals(first) ? 'x' : 'o'
+        );
+        playground.outputField();
     }
 
 }

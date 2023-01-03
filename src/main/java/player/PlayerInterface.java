@@ -2,6 +2,6 @@ package player;
 
 public interface PlayerInterface {
 
-    String chooseCell(int size);
+    int[] chooseCell(int size);
 
 }

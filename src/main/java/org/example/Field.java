@@ -2,13 +2,11 @@ package org.example;
 
 import utils.GetInput;
 
-import java.util.ArrayList;
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.*;
 
 public class Field {
-    Scanner scan = new Scanner(System.in).useLocale(Locale.UK).useDelimiter("\\n");
-    final ArrayList<Character[]> field = buildField();
+    public final ArrayList<Character[]> field = buildField();
+
     private int setSize() {
         System.out.println("Enter field size (3 - 5):");
         int res = GetInput.getNum();
@@ -18,7 +16,6 @@ public class Field {
         } else return res;
 
     }
-
     private ArrayList<Character[]> buildField() {
         ArrayList<Character[]> field = new ArrayList<>();
         int size = setSize();
@@ -32,9 +29,13 @@ public class Field {
         return field;
     }
 
+    public void changeField(int[] coordinates, char mark) {
+        field.get(coordinates[0])[coordinates[1]] = mark;
+    }
+
     public void outputField() {
         int size = field.size();
-        for (int ind = -1; ind < field.get(0).length; ind += 1) {
+        for (int ind = -1; ind < size; ind += 1) {
             if (ind == size - 1) {
                 System.out.println(ind);
             } else if (ind == -1) {

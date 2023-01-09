@@ -1,3 +1,9 @@
 package player;
 
-public abstract class Player implements PlayerInterface {}
+import field.Cell;
+
+public abstract class Player {
+    public char mark;
+
+    public abstract Cell chooseCell(Cell[][] field);
+}

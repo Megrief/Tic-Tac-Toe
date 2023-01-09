@@ -1,26 +1,27 @@
 package player;
 
+import field.Cell;
 import utils.GetInput;
 public class Human extends Player {
 
     private int getRowCol(String rowOrCol, int size) {
-        System.out.println(String.format("Enter index of %s (0 - %d):", rowOrCol, size - 1));
+        System.out.printf("Enter index of %s (0 - %d):%n", rowOrCol, size - 1);
         int res = GetInput.getNum();
         if (res >= size) {
-            System.out.println(String.format("Wrong index of %s!", rowOrCol));
+            System.out.printf("Wrong index of %s!%n", rowOrCol);
             return getRowCol(rowOrCol, size);
         } else return res;
     }
     @Override
-    public int[] chooseCell(int size) {
-        System.out.println("Choose cell on the field:");
-        int row = getRowCol("row", size);
-        int col = getRowCol("column", size);
-        return new int[] { row, col } ;
+    public Cell chooseCell(Cell[][] field) {
+        System.out.println("\nChoose cell on the field:");
+        int row = getRowCol("row", field.length);
+        int col = getRowCol("column", field.length);
+        return field[row][col];
     }
 
     @Override
     public String toString() {
-        return "player";
+        return "Player";
     }
 }

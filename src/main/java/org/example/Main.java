@@ -6,8 +6,3 @@ public class Main {
         ticTac.init();
     }
 }
-// add message for computer. To separate field outputs.
-// add winning conditions
-// add logic to computer: first place -> stop player's winning. second -> win
-// add empty lines before and after field
-//

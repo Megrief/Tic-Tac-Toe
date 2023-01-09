@@ -1,17 +1,18 @@
 package player;
 
-import java.util.Random;
+import field.Cell;
+import utils.Minimax;
 
 public class Computer extends Player {
-    Random random = new Random();
+    Minimax minimax = new Minimax();
+
     @Override
-    public int[] chooseCell(int size) {
-        int row = random.nextInt(0, size - 1);
-        int col = random.nextInt(0, size - 1);
-        return new int[] { row, col };
+    public Cell chooseCell(Cell[][] field) {
+        System.out.println("\nComputer is thinking...");
+        return minimax.findBestMove(field, this);
     }
     @Override
     public String toString() {
-        return "computer";
+        return "Computer";
     }
 }

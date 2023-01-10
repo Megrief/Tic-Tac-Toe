@@ -17,7 +17,10 @@ public class Human extends Player {
         System.out.println("\nChoose cell on the field:");
         int row = getRowCol("row", field.length);
         int col = getRowCol("column", field.length);
-        return field[row][col];
+        if (field[row][col].mark == '*') {
+            System.out.println("Current cell is occupied! Try again.");
+            return chooseCell(field);
+        } else return field[row][col];
     }
 
     @Override

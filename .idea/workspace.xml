@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1750710-2ece-40bf-92d2-5ecabba547bd" name="Changes" comment="First build. Without winning conditions.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/field/Cell.java" afterDir="false" />
+    <list default="true" id="a1750710-2ece-40bf-92d2-5ecabba547bd" name="Changes" comment="Finished Tic-Tac-Toe with minimax algorithm.&#10;It supports only 3x3 field. Game lets you choose who will move first. Minimax algorithm realised for computer player (information about algorithm was taken from: https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-3-tic-tac-toe-ai-finding-optimal-move/).">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/field/Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TicTacToe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/player/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/Computer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/player/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/player/PlayerInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/GetInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/GetInput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672722697006</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finished Tic-Tac-Toe with minimax algorithm.&#10;It supports only 3x3 field. Game lets you choose who will move first. Minimax algorithm realised for computer player (information about algorithm was taken from: https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-3-tic-tac-toe-ai-finding-optimal-move/).">
+      <created>1673261932791</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673261932791</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +125,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Work in progress" />
     <MESSAGE value="First build. Without winning conditions." />
-    <option name="LAST_COMMIT_MESSAGE" value="First build. Without winning conditions." />
+    <MESSAGE value="Finished Tic-Tac-Toe with minimax algorithm.&#10;It supports only 3x3 field. Game lets you choose who will move first. Minimax algorithm realised for computer player (information about algorithm was taken from: https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-3-tic-tac-toe-ai-finding-optimal-move/)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Tic-Tac-Toe with minimax algorithm.&#10;It supports only 3x3 field. Game lets you choose who will move first. Minimax algorithm realised for computer player (information about algorithm was taken from: https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-3-tic-tac-toe-ai-finding-optimal-move/)." />
   </component>
 </project>

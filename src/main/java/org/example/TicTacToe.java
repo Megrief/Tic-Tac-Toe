@@ -42,6 +42,7 @@ public class TicTacToe implements IsGameFinished {
             makeMove(current);
             if (winner != null) break;
             if (!isEmptyCellsLeft(board.field)) {
+                board.outputField();
                 System.out.println("\nFriendship wins! Try again.");
                 break;
             }

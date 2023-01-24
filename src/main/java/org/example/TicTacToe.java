@@ -53,7 +53,7 @@ public class TicTacToe implements IsGameFinished {
     public void makeMove(Player player) {
         board.outputField();
         Cell cell = player.chooseCell(board.field);
-        board.field[cell.x][cell.y].mark = player.mark;
+        board.field[cell.x][cell.y].setMark(player.mark);
         if (evaluate(player, board.field) > 0) {
             winner = player.toString();
             board.outputField();

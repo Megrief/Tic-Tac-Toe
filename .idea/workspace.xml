@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1750710-2ece-40bf-92d2-5ecabba547bd" name="Changes" comment="Check if cell is occupied or not has been added">
+    <list default="true" id="a1750710-2ece-40bf-92d2-5ecabba547bd" name="Changes" comment="Output for final state of field has been added.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/player/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/field/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/field/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TicTacToe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +39,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
@@ -115,7 +116,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673319908888</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Check if cell is occupied or not has been added">
+      <created>1673320674735</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673320674735</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Output for final state of field has been added.">
+      <created>1673320818236</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673320818236</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,6 +149,7 @@
     <MESSAGE value="First build. Without winning conditions." />
     <MESSAGE value="Finished Tic-Tac-Toe with minimax algorithm.&#10;It supports only 3x3 field. Game lets you choose who will move first. Minimax algorithm realised for computer player (information about algorithm was taken from: https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-3-tic-tac-toe-ai-finding-optimal-move/)." />
     <MESSAGE value="Check if cell is occupied or not has been added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Check if cell is occupied or not has been added" />
+    <MESSAGE value="Output for final state of field has been added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Output for final state of field has been added." />
   </component>
 </project>

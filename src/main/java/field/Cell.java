@@ -11,6 +11,9 @@ public class Cell {
         this.mark = mark;
     }
 
+    public void setMark(char newMark) {
+        mark = newMark;
+    }
     @Override
     public String toString() {
         return String.valueOf(mark);

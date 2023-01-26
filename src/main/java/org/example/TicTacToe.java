@@ -19,6 +19,7 @@ public class TicTacToe implements IsGameFinished, Input, Output {
         printInConsole("Who will move first (computer or player):");
         switch (Input.scan.next().toLowerCase()) {
             case ("computer") -> {
+                //TODO set mark of player from this method
                 return "computer";
             }
             case ("player") -> {
@@ -32,8 +33,8 @@ public class TicTacToe implements IsGameFinished, Input, Output {
     }
 
     public void init() {
-        comp.mark = getMark(first, comp);
-        human.mark = getMark(first, human);
+        comp.setMark(getMark(first, comp));
+        human.setMark(getMark(first, human));
         Player current = first.equals("computer") ? comp : human;
 
         while (isEmptyCellsLeft(board.field)) {
@@ -49,9 +50,10 @@ public class TicTacToe implements IsGameFinished, Input, Output {
     }
 
     public void makeMove(Player player) {
+        //TODO think about possibility to move this method in Player class
         printInConsole(board.toString());
         Cell cell = player.chooseCell(board.field);
-        board.field[cell.x][cell.y].setMark(player.mark);
+        board.field[cell.x][cell.y].setMark(player.getMark());
         if (evaluate(player, board.field) > 0) {
             winner = player.toString();
             printInConsole(board.toString());

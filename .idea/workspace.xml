@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1750710-2ece-40bf-92d2-5ecabba547bd" name="Changes" comment="Setter for marking cell was added.">
+    <list default="true" id="a1750710-2ece-40bf-92d2-5ecabba547bd" name="Changes" comment="Work after mistakes:&#10;- GetInput class replaced with interface Input&#10;- Output interface was created for print messages in console&#10;- Explicit scanner instance was removed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/field/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/field/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/field/Field.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TicTacToe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/player/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/Computer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/player/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/GetInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/GetInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Input.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/IsGameFinished.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/IsGameFinished.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Minimax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Minimax.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674542654203</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Work after mistakes:&#10;- GetInput class replaced with interface Input&#10;- Output interface was created for print messages in console&#10;- Explicit scanner instance was removed.">
+      <created>1674706889546</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674706889546</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,6 +172,7 @@
     <MESSAGE value="Check if cell is occupied or not has been added" />
     <MESSAGE value="Output for final state of field has been added." />
     <MESSAGE value="Setter for marking cell was added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Setter for marking cell was added." />
+    <MESSAGE value="Work after mistakes:&#10;- GetInput class replaced with interface Input&#10;- Output interface was created for print messages in console&#10;- Explicit scanner instance was removed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Work after mistakes:&#10;- GetInput class replaced with interface Input&#10;- Output interface was created for print messages in console&#10;- Explicit scanner instance was removed." />
   </component>
 </project>

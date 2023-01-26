@@ -3,8 +3,8 @@ package utils;
 import field.Cell;
 import player.Player;
 
-public class Minimax implements IsGameFinished {
-
+public interface Minimax extends IsGameFinished {
+    //TODO create instance of field equals to original for minimax. Don't change original field
     private int minimax(Cell[][] field, int depth, Player player, boolean playersMove) {
         int score = evaluate(player, field);
         int best;
@@ -21,10 +21,10 @@ public class Minimax implements IsGameFinished {
             best = -1000;
             for(Cell[] cells: field) {
                 for (Cell cell: cells) {
-                    if (cell.mark == '*') {
-                        cell.mark = player.mark;
+                    if (cell.getMark() == '*') {
+                        cell.setMark(player.getMark());
                         best = Math.max(best, minimax(field, depth + 1, player, false));
-                        cell.mark = '*';
+                        cell.setMark('*');
                     }
                 }
             }
@@ -32,10 +32,10 @@ public class Minimax implements IsGameFinished {
             best = 1000;
             for (Cell[] cells: field) {
                 for (Cell cell: cells) {
-                    if (cell.mark == '*') {
-                        cell.mark = player.mark == 'x' ? 'o' : 'x';
+                    if (cell.getMark() == '*') {
+                        cell.setMark(player.getMark() == 'x' ? 'o' : 'x');
                         best = Math.min(best, minimax(field, depth + 1, player, true));
-                        cell.mark = '*';
+                        cell.setMark('*');
                     }
                 }
             }
@@ -44,16 +44,16 @@ public class Minimax implements IsGameFinished {
         return best;
     }
 
-    public Cell findBestMove(Cell[][] field, Player player) {
+    default Cell findBestMove(Cell[][] field, Player player) {
         int best = -1000;
         Cell bestMove = new Cell(-1, -1, '*');
 
         for (Cell[] cells: field) {
             for (Cell cell: cells) {
-                if (cell.mark == '*') {
-                    cell.mark = player.mark;
+                if (cell.getMark() == '*') {
+                    cell.setMark(player.getMark());
                     int moveVal = minimax(field, 0, player, false);
-                    cell.mark = '*';
+                    cell.setMark('*');
                     if (moveVal > best) {
                         bestMove = cell;
                         best = moveVal;

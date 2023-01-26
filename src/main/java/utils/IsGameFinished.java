@@ -9,9 +9,10 @@ import java.util.List;
 
 public interface IsGameFinished {
 
+    //TODO How to delete this interface without repeating code?
     default boolean isEmptyCellsLeft(Cell[][] field) {
         for (Cell[] cells: field) {
-            if (Arrays.stream(cells).anyMatch(cell -> cell.mark == '*')) return true;
+            if (Arrays.stream(cells).anyMatch(cell -> cell.getMark() == '*')) return true;
         }
         return false;
     }
@@ -21,29 +22,29 @@ public interface IsGameFinished {
         ArrayList<Cell> secondD = new ArrayList<>();
 
         for (int ind = 0; ind < field.length; ind += 1) {
-            List<Character> row = Arrays.stream(field[ind]).map(cell -> cell.mark).distinct().toList();
+            List<Character> row = Arrays.stream(field[ind]).map(Cell::getMark).distinct().toList();
             if (row.size() == 1 && row.get(0) != '*') {
-                return row.get(0) == player.mark ? 10 : -10;
+                return row.get(0) == player.getMark() ? 10 : -10;
             }
 
             ArrayList<Character> col = new ArrayList<>();
             for (Cell[] cells: field) {
-                col.add(cells[ind].mark);
+                col.add(cells[ind].getMark());
             }
             if (col.stream().distinct().toList().size() == 1 && col.get(0) != '*') {
-                return col.get(0) == player.mark ? 10 : -10;
+                return col.get(0) == player.getMark() ? 10 : -10;
             }
 
             firstD.add(field[ind][field.length - (ind + 1)]);
             secondD.add(field[ind][ind]);
         }
 
-        if (firstD.stream().map(cell -> cell.mark).distinct().toList().size() == 1
-                && firstD.get(0).mark != '*') {
-            return firstD.get(0).mark == player.mark ? 10 : -10;
-        } else if (secondD.stream().map(cell -> cell.mark).distinct().toList().size() == 1
-                && secondD.get(0).mark != '*') {
-            return secondD.get(0).mark == player.mark ? 10 : -10;
+        if (firstD.stream().map(Cell::getMark).distinct().toList().size() == 1
+                && firstD.get(0).getMark() != '*') {
+            return firstD.get(0).getMark() == player.getMark() ? 10 : -10;
+        } else if (secondD.stream().map(Cell::getMark).distinct().toList().size() == 1
+                && secondD.get(0).getMark() != '*') {
+            return secondD.get(0).getMark() == player.getMark() ? 10 : -10;
         } else return 0;
     }
 }

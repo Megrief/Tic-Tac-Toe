@@ -8,6 +8,7 @@ public interface Input {
     Scanner scan = new Scanner(System.in).useDelimiter("\\n");
 
     default char getMark(String first, Player player) {
+        //TODO rewrite or remove this method.
         if (first.equalsIgnoreCase(player.toString())) return 'x';
         return 'o';
     }

@@ -19,7 +19,7 @@ public class Human extends Player implements Input, Output {
         printInConsole("Choose cell on the field:");
         int row = getRowCol("row", field.length);
         int col = getRowCol("column", field.length);
-        if (field[row][col].mark != '*') {
+        if (field[row][col].getMark() != '*') {
             printInConsole("Current cell is occupied! Try again.");
             return chooseCell(field);
         } else return field[row][col];

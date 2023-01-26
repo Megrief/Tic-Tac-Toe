@@ -11,8 +11,11 @@ public class Cell {
         this.mark = mark;
     }
 
-    public void setMark(char newMark) {
-        mark = newMark;
+    public void setMark(char input) {
+        mark = input;
+    }
+    public char getMark() {
+        return mark;
     }
     @Override
     public String toString() {

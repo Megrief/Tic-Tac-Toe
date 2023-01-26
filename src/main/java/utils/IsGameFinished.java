@@ -20,7 +20,7 @@ public interface IsGameFinished {
         ArrayList<Cell> firstD = new ArrayList<>();
         ArrayList<Cell> secondD = new ArrayList<>();
 
-        for (int ind = 0; ind < 3; ind += 1) {
+        for (int ind = 0; ind < field.length; ind += 1) {
             List<Character> row = Arrays.stream(field[ind]).map(cell -> cell.mark).distinct().toList();
             if (row.size() == 1 && row.get(0) != '*') {
                 return row.get(0) == player.mark ? 10 : -10;

@@ -1,36 +1,40 @@
 package field;
 
 public class Field {
+    final int size = 3;
     public final Cell[][] field = buildField();
 
     private Cell[][] buildField() {
-        Cell[][] field = new Cell[3][3];
-        for (int row = 0; row < 3; row += 1) {
-            for (int col = 0; col < 3; col += 1) {
+        Cell[][] field = new Cell[size][size];
+        for (int row = 0; row < size; row += 1) {
+            for (int col = 0; col < size; col += 1) {
                 field[row][col] = new Cell(row, col, '*');
             }
         }
         return field;
     }
 
-    public void outputField() {
-        for (int ind = -1; ind < 3; ind += 1) {
-            if (ind == 3 - 1) {
-                System.out.println(ind);
+    @Override
+    public String toString() {
+        StringBuilder str = new StringBuilder();
+        for (int ind = -1; ind < size; ind += 1) {
+            if (ind == size - 1) {
+                str.append(ind).append("\n");
             } else if (ind == -1) {
-                System.out.print("+ ");
-            } else System.out.print(ind + " ");
+                str.append("+ ");
+            } else str.append(ind).append(" ");
         }
-        for (int row = 0; row < 3; row += 1) {
-            for (int col = 0; col < 3; col += 1) {
-                if (col == 0) System.out.print(row + " ");
-                if (col < 3 - 1) {
-                    System.out.print(field[row][col] + " ");
+        for (int row = 0; row < size; row += 1) {
+            for (int col = 0; col < size; col += 1) {
+                if (col == 0) str.append(row).append(" ");
+                if (col < size - 1) {
+                    str.append(field[row][col]).append(" ");
                 } else {
-                    System.out.println(field[row][col]);
+                    str.append(field[row][col]).append("\n");
                 }
             }
         }
+        return str.toString();
     }
 }
 

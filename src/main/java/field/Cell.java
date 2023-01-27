@@ -1,13 +1,9 @@
 package field;
 
 public class Cell {
-    public int x;
-    public int y;
     public char mark;
 
-    public Cell(int x, int y, char mark) {
-        this.x = x;
-        this.y = y;
+    public Cell(char mark) {
         this.mark = mark;
     }
 

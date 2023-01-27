@@ -9,12 +9,11 @@ import java.util.List;
 
 public interface IsGameFinished {
 
-    //TODO How to delete this interface without repeating code?
-    default boolean isEmptyCellsLeft(Cell[][] field) {
+    default boolean fieldIsFilled(Cell[][] field) {
         for (Cell[] cells: field) {
-            if (Arrays.stream(cells).anyMatch(cell -> cell.getMark() == '*')) return true;
+            if (Arrays.stream(cells).anyMatch(cell -> cell.getMark() == '*')) return false;
         }
-        return false;
+        return true;
     }
 
     default int evaluate(Player player, Cell[][] field) {

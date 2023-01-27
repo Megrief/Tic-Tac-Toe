@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1750710-2ece-40bf-92d2-5ecabba547bd" name="Changes" comment="Work after mistakes:&#10;- GetInput class replaced with interface Input&#10;- Output interface was created for print messages in console&#10;- Explicit scanner instance was removed.">
+    <list default="true" id="a1750710-2ece-40bf-92d2-5ecabba547bd" name="Changes" comment="Work after mistakes:&#10;- Getters and Setters were added for mark&#10;- Roadmap for work was written">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/field/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/field/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/field/Field.java" afterDir="false" />
@@ -15,6 +15,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Input.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/IsGameFinished.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/IsGameFinished.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/Minimax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Minimax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Output.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674706889546</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Work after mistakes:&#10;- Getters and Setters were added for mark&#10;- Roadmap for work was written">
+      <created>1674710146390</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674710146390</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,6 +181,7 @@
     <MESSAGE value="Output for final state of field has been added." />
     <MESSAGE value="Setter for marking cell was added." />
     <MESSAGE value="Work after mistakes:&#10;- GetInput class replaced with interface Input&#10;- Output interface was created for print messages in console&#10;- Explicit scanner instance was removed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Work after mistakes:&#10;- GetInput class replaced with interface Input&#10;- Output interface was created for print messages in console&#10;- Explicit scanner instance was removed." />
+    <MESSAGE value="Work after mistakes:&#10;- Getters and Setters were added for mark&#10;- Roadmap for work was written" />
+    <option name="LAST_COMMIT_MESSAGE" value="Work after mistakes:&#10;- Getters and Setters were added for mark&#10;- Roadmap for work was written" />
   </component>
 </project>

@@ -1,24 +1,25 @@
 package utils;
 
-import player.Player;
-
 import java.util.Scanner;
 
 public interface Input {
     Scanner scan = new Scanner(System.in).useDelimiter("\\n");
 
-    default char getMark(String first, Player player) {
-        //TODO rewrite or remove this method.
-        if (first.equalsIgnoreCase(player.toString())) return 'x';
-        return 'o';
+    static String getString() {
+        String input = scan.next();
+        if (input == null || input.isBlank()) {
+            Output.printInConsole("Input is empty! Try again:");
+            return getString();
+        }
+        return input;
     }
 
-    default int getNum() {
+    static int getNum() {
         String input = Input.scan.next();
 
         while (!input.matches("\\d+")) {
-            System.out.println("Wrong input!");
-            System.out.println("Enter not negative integer number:");
+            Output.printInConsole("Wrong input!");
+            Output.printInConsole("Enter not negative integer number:");
             input = Input.scan.next();
         }
         return Integer.parseInt(input);

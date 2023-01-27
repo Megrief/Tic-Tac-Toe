@@ -1,25 +1,24 @@
 package field;
 
-
 public class Field {
-    final int size = 3;
-    //TODO Try to add method for getting field from this class. Make changes with another method
+    public final int size = 3;
     public final Cell[][] field = buildField();
-    //TODO Try to safe the most work with Cells in this class
 
-    /* public boolean isEmptyCellsLeft() {
-        for (Cell[] cells: field) {
-            if (Arrays.stream(cells).anyMatch(cell -> cell.toString().equals("*"))) return true;
-        }
-        return false;
+    public Cell[][] getField() {
+        Cell[][] copied;
+        copied = field;
+        return copied;
     }
-     */
-    //TODO add method to get specified cell with indices in arguments, and method that will modify it
+
+    public Cell getCell(int row, int col) {
+        return field[row][col];
+    }
+
     private Cell[][] buildField() {
         Cell[][] field = new Cell[size][size];
         for (int row = 0; row < size; row += 1) {
             for (int col = 0; col < size; col += 1) {
-                field[row][col] = new Cell(row, col, '*');
+                field[row][col] = new Cell('*');
             }
         }
         return field;

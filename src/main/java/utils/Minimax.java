@@ -1,6 +1,7 @@
 package utils;
 
 import field.Cell;
+import field.Field;
 import player.Player;
 
 public interface Minimax extends IsGameFinished {
@@ -13,7 +14,7 @@ public interface Minimax extends IsGameFinished {
             return score;
         }
 
-        if (!isEmptyCellsLeft(field)) {
+        if (fieldIsFilled(field)) {
             return 0;
         }
 
@@ -44,18 +45,19 @@ public interface Minimax extends IsGameFinished {
         return best;
     }
 
-    default Cell findBestMove(Cell[][] field, Player player) {
+    default int[] findBestMove(Field field, Player player) {
         int best = -1000;
-        Cell bestMove = new Cell(-1, -1, '*');
+        int[] bestMove = new int[] { -1, -1 };
 
-        for (Cell[] cells: field) {
-            for (Cell cell: cells) {
+        for (int row = 0; row < field.size; row += 1) {
+            for (int col = 0; col < field.size; col += 1) {
+                Cell cell = field.getCell(row, col);
                 if (cell.getMark() == '*') {
                     cell.setMark(player.getMark());
-                    int moveVal = minimax(field, 0, player, false);
+                    int moveVal = minimax(field.getField(), 0, player, false);
                     cell.setMark('*');
                     if (moveVal > best) {
-                        bestMove = cell;
+                        bestMove = new int[] { row, col };
                         best = moveVal;
                     }
                 }
